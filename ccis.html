@@ -12,7 +12,7 @@
 
     <title>SamePage</title>
 
-    <link rel="icon" type="image/x-icon" href="/assets/img/logo.png" />
+    <link rel="icon" type="image/x-icon" href="/assets/img/samepage.png" />
 
     <link
       href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css"
@@ -31,7 +31,8 @@
     <!-- Top Navigation -->
     <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
       <!-- Navbar Brand-->
-      <a class="navbar-brand ps-3" href="dashboard.html">Samepage Web App</a>
+
+      <a class="navbar-brand ps-3" href="dashboard.html">SamePage Web App</a>
       <!-- Sidebar Toggle-->
       <button
         class="btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0"
@@ -72,8 +73,6 @@
 
     <div id="layoutSidenav">
       <!-- Side Navigation -->
-      <div id="layoutSidenav">
-      <!-- Side Navigation -->
       <div id="layoutSidenav_nav">
         <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
           <div class="sb-sidenav-menu">
@@ -85,7 +84,6 @@
                 Dashboard
               </a>
 
-              <!-- Admin Pages -->
               <!-- Admin Pages -->
               <div id="nav_admin_pages"></div>
 
@@ -115,17 +113,18 @@
                   <!-- Add more items as needed -->
                 </div>
               </div>
-              <a class="nav-link " href="mybookshelf.html">
+
+              <a class="nav-link" href="mybookshelf.html">
                 <div class="sb-nav-link-icon">
                   <i class="fas fa-note-sticky"></i>
                 </div>
                 My Bookshelf
               </a>
-              <a class="nav-link" href="booksborrowed.html">
+              <a class="nav-link" href="mybooks.html">
                 <div class="sb-nav-link-icon">
                   <i class="fas fa-note-sticky"></i>
                 </div>
-                Books Borrowed
+                My Books
               </a>
             </div>
           </div>
@@ -141,21 +140,67 @@
         <main>
           <!-- Content -->
           <div class="container-fluid px-4">
-            <h1 class="mt-4">Dashboard</h1>
-            <ol class="breadcrumb mb-4">
-              <li class="breadcrumb-item">System</li>
-              <li class="breadcrumb-item active">Dashboard</li>
-            </ol>
+            <h1 class="mt-4">CCIS Bookshelf</h1>
+            <div class="row row-cols-1 row-cols-md-3 g-4">
+              <div class="col">
+                <div class="card h-100">
+                  <img src="..." class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      This is a longer card with supporting text below as a
+                      natural lead-in to additional content. This content is a
+                      little bit longer.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <img src="..." class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">This is a short card.</p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <img src="..." class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      This is a longer card with supporting text below as a
+                      natural lead-in to additional content.
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="col">
+                <div class="card h-100">
+                  <img src="..." class="card-img-top" alt="..." />
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">
+                      This is a longer card with supporting text below as a
+                      natural lead-in to additional content. This content is a
+                      little bit longer.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div class="row">
               <!-- Notifications -->
               <div class="alert alert-success d-none" role="alert"></div>
               <div class="alert alert-danger d-none" role="alert"></div>
             </div>
           </div>
+
           <!-- End of Content -->
         </main>
         <!-- Footer -->
-        
+
         <!-- End of Footer -->
       </div>
     </div>

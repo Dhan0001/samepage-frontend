@@ -1,3 +1,9 @@
+import {
+  backendURL,
+  successNotification,
+  errorNotification,
+} from "../utils/utils.js";
+
 // Form Login
 const form_login = document.getElementById("form_login");
 

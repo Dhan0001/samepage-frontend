@@ -1,3 +1,55 @@
+import { setRouter } from "../router/router.js";
+
+// Set Router
+setRouter();
+
+// Backend URL
+const backendURL = "https://2405-216-247-50-208.ngrok-free.app/";
+
+// Get Logged User Profile
+async function getLoggedUser() {
+  // Access User Profile API Endpoint
+  const response = await fetch(backendURL + "/api/profile/show", {
+    headers: {
+      Accept: "application/json",
+      Authorization: "Bearer " + localStorage.getItem("token"),
+    },
+  });
+
+  // Get response if 200-299 status code
+  if (response.ok) {
+    const json = await response.json();
+
+    document.getElementById("user_logged").innerHTML =
+      json.firstname + " " + json.lastname;
+
+    if (document.getElementById("user_id")) {
+      document.getElementById("user_id").value = json.id;
+    }
+  }
+  // Get response if 400 or 500 status code
+  else {
+    const json = await response.json();
+
+    errorNotification(json.message, 10);
+  }
+}
+
+// Show Admin Pages Navigation
+function showNavAdminPages() {
+  if (localStorage.getItem("role") == "Admin") {
+    document.getElementById(
+      "nav_admin_pages"
+    ).innerHTML = `<div class="sb-sidenav-menu-heading">Admin Pages</div>
+        <a class="nav-link active" href="users.html">
+          <div class="sb-nav-link-icon">
+            <i class="fas fa-user"></i>
+          </div>
+          Users
+        </a>`;
+  }
+}
+
 // Notifications
 function successNotification(message, seconds = 0) {
   document.querySelector(".alert-success").classList.remove("d-none");
@@ -25,4 +77,10 @@ function errorNotification(message, seconds = 0) {
   }
 }
 
-export { successNotification, errorNotification };
+export {
+  backendURL,
+  showNavAdminPages,
+  successNotification,
+  errorNotification,
+  getLoggedUser,
+};
