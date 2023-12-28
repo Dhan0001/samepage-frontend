@@ -4,14 +4,15 @@ import { setRouter } from "../router/router.js";
 setRouter();
 
 // Backend URL
-const backendURL = "https://2405-216-247-50-208.ngrok-free.app/";
+const backendURL = "https://7920-49-145-192-122.ngrok-free.app/samepage/public";
 
 // Get Logged User Profile
 async function getLoggedUser() {
   // Access User Profile API Endpoint
-  const response = await fetch(backendURL + "/api/profile/show", {
+  const response = await fetch(backendURL + "/api/user", {
     headers: {
       Accept: "application/json",
+      "ngrok-skip-browser-warning": "69420",
       Authorization: "Bearer " + localStorage.getItem("token"),
     },
   });
